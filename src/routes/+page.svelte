@@ -30,6 +30,7 @@
 
 						chatStore.update((prev) => [
 							{
+								// eslint-disable-next-line
 								// @ts-ignore
 								profile,
 								messages: []
@@ -61,6 +62,8 @@
 					on:click={() => (selectedChat = i)}
 					role="radio"
 					aria-checked={selectedChat == i}
+					on:keydown={() => {}}
+					tabindex={i}
 				>
 					<img
 						src={`https://api.dicebear.com/7.x/${style}/svg?seed=${profile.name.replaceAll(
