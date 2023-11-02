@@ -7,5 +7,9 @@ export const diagnoses = [
 	'Autism',
 	'ADHD',
 	'Anorexia',
-	'Bulimia'
+	'Bulimia',
+	'OCD',
+	'Insomnia',
+	'Kleptomania',
+	'Paranoia',
 ] as const
