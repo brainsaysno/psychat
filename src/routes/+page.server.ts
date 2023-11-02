@@ -61,7 +61,9 @@ export const actions = {
 			model: 'gpt-3.5-turbo',
 		});
 
-		[profile.summary, profile.history] = completion.choices[0].message.content?.split('####') || [null, null];
+		const completionWithoutTags = (completion.choices[0].message.content || "").replace('--- START OF RESPONSE ---', '').replace('--- END OF RESPONSE ---', '');
+
+		[profile.summary, profile.history] = completionWithoutTags.split('####') || [null, null];
 
 		return profile;
 	}

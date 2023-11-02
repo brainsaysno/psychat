@@ -12,9 +12,11 @@ past psychological history, past medical history, family history, drug history, 
 You may not cover every point, as this needs to be realistic. Don't make it too extreme. First you will output a short summary of the case starting with "${toTitleCase(profile.sex)} patient presenting with" (summary of 30 words).
 Then you will output the case history using markdown (case history of 200 words). Don't output anything else. This is the format of the output:
 
-[summary]
+--- START OF RESPONSE ---
+[summary (40 words)]
 ####
-[case history]
+[case history (200 words)]
+--- END OF RESPONSE ---
 `
 // TODO: Maybe use JSON for the case history to make it more customizable?
 // Then you will output a JSON object represneting the case history with each section title and its content. Use markdown in the JSON values but don't add any headers. 
