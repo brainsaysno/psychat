@@ -13,7 +13,7 @@
 	let isHistoryOpen = false;
 </script>
 
-<main class="h-full px-8 py-10 box-border grid !grid-cols-[1fr_3fr] gap-2">
+<main class="h-screen px-8 py-10 box-border grid !grid-cols-[1fr_3fr] gap-2">
 	<section
 		class="bg-slate-100 dark:bg-slate-50 dark:bg-opacity-5 box-border mb-0 p-5 space-y-1 overflow-x-hidden whitespace-nowrap float-left"
 	>
@@ -199,4 +199,8 @@
 			<SvelteMarkdown source={$chatStore.at(selectedChat)?.profile.history} />
 		</article>
 	</dialog>
+	<footer class="col-span-2 text-center py-4">
+		<a href="https://www.github.com/brainsaysno/psychat"> ⧉ Página del proyecto </a> ·
+		<span>&copy; Nicolás Russo</span>
+	</footer>
 </main>
